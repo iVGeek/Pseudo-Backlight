@@ -9,25 +9,25 @@ ACPI is hard
 Your OEM sucks
 Your eyes hurt
 
-What on earth is this?
-If you have a bleeding-edge laptop from certain manufacturers, you might not be able to control the backlight brightness. You might have tried a hundred random hacks, none of which helped, and Linux doesn't have some esoteric driver for your system either.
+#What on earth is this?
+Certain manufacturers' cutting-edge laptops may not allow you to control the backlight brightness. You may have tried a hundred random hacks, none of which worked, and Linux also does not have some obscure driver for your system.
 
-If you have a /sys/class/backlight/acpi_video0, but it does nothing, fake-backlight can help until someone figures out what insane thought process your oem went thru to arrive at their decision to not support the ACPI standard. Hopefully the developer trying to resolve the problem without any documentation doesn't off themselves in the process.
+If you have a /sys/class/backlight/acpi video0 but it doesn't work, pseudo-backlight can help you until someone figures out what insane thought process your OEM went through to decide not to support the ACPI standard. Hopefully, the developer who is attempting to solve the problem without documentation does not go MIA.
 
-fake-backlight works with GNOME, and will use xbacklight to control the display brightness when you change the backlight using the hotkeys or other method. If xbacklight isn't working and you are really hurting, xrandr can be used (set USE_XRANDR=True) to apply software brightness.
+When you change the backlight using hotkeys or other methods, pseudo-backlight will use xbacklight to control the display brightness. If xbacklight isn't working and you're really struggling, xrandr (set USE XRANDR=True) can be used to apply software brightness.
 
-fake-backlight requires Python 3.
+pseudo-backlight requires Python 3.
 
-How to Install.
+#How to Install.
 
 sudo pip3 install pydbus;
 
 mkdir -p ~/.config/systemd/user;
 
-cp fake-backlight.service ~/.config/systemd/user;
+cp pseudo-backlight.service ~/.config/systemd/user;
 
-sudo cp fake-backlight /usr/local/bin/;
+sudo cp pseudo-backlight /usr/local/bin/;
 
-systemctl --user enable fake-backlight;
+systemctl --user enable pseudo-backlight;
 
-systemctl --user start fake-backlight;
+systemctl --user start pseudo-backlight;
