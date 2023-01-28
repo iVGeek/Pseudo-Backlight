@@ -18,7 +18,8 @@ fake-backlight works with GNOME, and will use xbacklight to control the display 
 
 fake-backlight requires Python 3.
 
-Install:
+How to Install.
+
 sudo pip3 install pydbus;
 mkdir -p ~/.config/systemd/user;
 cp fake-backlight.service ~/.config/systemd/user;
