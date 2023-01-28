@@ -21,8 +21,13 @@ fake-backlight requires Python 3.
 How to Install.
 
 sudo pip3 install pydbus;
+
 mkdir -p ~/.config/systemd/user;
+
 cp fake-backlight.service ~/.config/systemd/user;
+
 sudo cp fake-backlight /usr/local/bin/;
+
 systemctl --user enable fake-backlight;
+
 systemctl --user start fake-backlight;
