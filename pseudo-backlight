@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# fake-backlight
+# pseudo-backlight
 #
 # if standard acpi controls for the display backlight
 # aren't working, we might be able to control it
@@ -13,8 +13,6 @@
 # this hack will monitor dbus for the relevant events
 # and handle as necessary.
 #
-# Stefanie Kondik - shade@chemlab.org
-# license: http://www.wtfpl.net/
 #
 
 USE_XRANDR = False
@@ -31,7 +29,7 @@ from gi.repository import Gdk
 from gi.repository import GLib
 import pydbus
 
-class FakeBacklight:
+class Pseudo Backlight:
 
     def __init__(self):
         self.bus = pydbus.SessionBus()
@@ -95,7 +93,7 @@ class FakeBacklight:
         login1.PrepareForSleep.connect(resume_callback)
         self.power.PropertiesChanged.connect(brightness_callback)
 
-        print('Fake backlight service starting..')
+        print('pseudo backlight service starting..')
         self.update()
 
         loop = GLib.MainLoop()
@@ -103,15 +101,15 @@ class FakeBacklight:
 
 
 def run():
-    fake_backlight = FakeBacklight()
+    pseudo_backlight = PseudoBacklight()
 
     setproctitle.setproctitle(sys.argv[0])
 
     if len(sys.argv) == 2 and sys.argv[1] == '-u':
-        fake_backlight.update()
+        pseudo_backlight.update()
         return 0
     elif len(sys.argv) == 1:
-        fake_backlight.monitor()
+        pseudo_backlight.monitor()
         return 0
 
     print('usage: %s [-u]' % sys.argv[0])
