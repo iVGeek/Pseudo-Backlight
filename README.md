@@ -19,6 +19,7 @@ When you change the backlight using hotkeys or other methods, pseudo-backlight w
 pseudo-backlight requires Python 3.
 
 ### How to Install.
+```` powershell
 
 sudo pip3 install pydbus;
 
@@ -31,3 +32,5 @@ sudo cp pseudo-backlight /usr/local/bin/;
 systemctl --user enable pseudo-backlight;
 
 systemctl --user start pseudo-backlight;
+
+````
