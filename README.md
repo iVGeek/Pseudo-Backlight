@@ -14,7 +14,7 @@ Certain manufacturers' cutting-edge laptops may not allow you to control the bac
 
 If you have a /sys/class/backlight/acpi video0 but it doesn't work, pseudo-backlight can help you until someone figures out what insane thought process your OEM went through to decide not to support the ACPI standard. Hopefully, the developer who is attempting to solve the problem without documentation does not go MIA.
 
-When you change the backlight using hotkeys or other methods, pseudo-backlight will use xbacklight to control the display brightness. If xbacklight isn't working and you're really struggling, xrandr (set USE XRANDR=True) can be used to apply software brightness.
+When you change the backlight using hotkeys or other methods, pseudo-backlight will use xbacklight to control the display brightness. If xbacklight isn't working and you're really struggling, ```` powershell xrandr (set USE XRANDR=True) ```` can be used to apply software brightness.
 
 pseudo-backlight requires Python 3.
 
