@@ -6,7 +6,7 @@ Pseudo-backlight mimics a backlight for your display because..
 
 You can't control it any other way in linux for reasons like:
 
-#### 1. [ACPI!](https://en.wikipedia.org/wiki/ACPI#:~:text=Advanced%20Configuration%20and%20Power%20Interface,swapping) is hard😞
+#### 1. [ACPI](https://en.wikipedia.org/wiki/ACPI#:~:text=Advanced%20Configuration%20and%20Power%20Interface,swapping) is hard😞
 #### 2. Your OEM sucks 😢
 #### 3. Your eyes hurt :hurtrealbad:
 
