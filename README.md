@@ -1,13 +1,14 @@
 # Pseudo-Backlight
 
-fake-backlight shouldn't need to exist, but it does.
+Pseudo-backlight shouldn't need to exist, but it does.
 
-fake-backlight fakes a backlight for your display because..
+Pseudo-backlight mimics a backlight for your display because..
 
-You can't control it any other way in linux
-ACPI is hard
-Your OEM sucks
-Your eyes hurt
+You can't control it any other way in linux for reasons like:
+
+# 1. ACPI is hard 😞:
+# 2. Your OEM sucks 😢
+# 3. Your eyes hurt :hurtrealbad:
 
 ### Wondering why/how in the multiverse? 🤔
 Certain manufacturers' cutting-edge laptops may not allow you to control the backlight brightness. You may have tried a hundred random hacks, none of which worked, and Linux also does not have some obscure driver for your system.
